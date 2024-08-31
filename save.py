@@ -47,7 +47,7 @@ def save_screen():
                     if st.session_state.id == "DISPL":
                         st.markdown("Download the desktop version of AC [here]("+aihandler.links['DISPL'][1]+")")
                     else:
-                        st.markdown("Try our simple " + aihandler.links[st.session_state.id][0] + " testing tool [here](#"+aihandler.links[st.session_state.id][1]+")")
+                        st.markdown("Try our simple " + aihandler.links[st.session_state.id][0] + " testing tool [here](../#"+aihandler.links[st.session_state.id][1]+")")
             st.session_state.messages.append({"role": "assistant", "content": response})
             print(st.session_state.messages)
 
