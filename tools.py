@@ -1,5 +1,5 @@
 import streamlit as st
-
+"""
 # SPEAKER
 #
 #
@@ -42,3 +42,5 @@ def speaker_tool():
             st.success(f"Great, change the speaker on Adobe Connect to {selected_device_name}! ")
         else:
             st.write("Try another speaker.")
+
+"""
