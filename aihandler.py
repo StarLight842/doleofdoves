@@ -55,3 +55,10 @@ It appears your bandwidth is not up to par. (You can confirm this by checking ou
  For the long term, talk to your parents or guardians about a faster wifi plan or using wired internet (Ethernet); if those options aren’t possible, try switching to the desktop version of Adobe Connect, which is less network-demanding. 
 """,
 }
+links = {
+"MIC": ["microphone", "test-your-microphone"],
+"DISPL": ["", "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html"],
+"CAM": ["camera", "test-your-camera"],
+"SND": ["speakers", "test-your-speakers"],
+"INT": ["internet", "test-your-internet"],
+}
