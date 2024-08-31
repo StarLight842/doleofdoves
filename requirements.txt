@@ -1,7 +1,4 @@
 streamlit
 google-generativeai
-sounddevice
-speedtest
-streamlit_lottie
-speedtest-cli
-streamlit_execute
+streamlit-webrtc
+numpy

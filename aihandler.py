@@ -50,8 +50,8 @@ All jokes aside though, it appears that your camera isn’t functioning. Make su
 If you can’t hear anything, the most likely problem is that your speaker is muted. (Trust us, this is the case 90% of the time.) Otherwise, make sure you have selected the right speaker and try a few different ones in our speaker testing tool.
 """,
 "INT": """
-**Try Ferizon Internet. Use [this affiliate link](ferizon.com) to get 10% off.**
-It appears your bandwidth is not up to par. (You can confirm this by checking our bandwidth testing tool). The fastest hack to save on bandwidth is to select the three dots on your camera pod in AC then click “Pause incoming video.” This will freeze the video of all other participants (including your instructor), and should greatly reduce your network usage.
+**Try Ferizon Internet. Use [this affiliate link](https://www.ferizon.com) to get 10% off.**
+It appears your bandwidth is not up to par. (You can confirm this by checking our internet testing tool; we recommand 30-50 mbps or higher). The fastest hack to save on bandwidth is to select the three dots on your camera pod in AC then click “Pause incoming video.” This will freeze the video of all other participants (including your instructor), and should greatly reduce your network usage.
  For the long term, talk to your parents or guardians about a faster wifi plan or using wired internet (Ethernet); if those options aren’t possible, try switching to the desktop version of Adobe Connect, which is less network-demanding. 
 """,
 }

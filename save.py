@@ -1,14 +1,14 @@
 import streamlit as st
 import aihandler
-
-st.session_state.messages = [{
-        "role": "assistant",
-        "content": "Welcome to DoveAI! What seems to be your problem today?"
-}]
-st.session_state.solved = False 
+if "messages" not in st.session_state:
+    st.session_state.messages = [{
+            "role": "assistant",
+            "content": "Welcome to DoveAI! What seems to be your problem today?"
+    }]
+if "solved" not in st.session_state:
+    st.session_state.solved = False 
 
 def save_screen():   
-
     title = "# We'll save you from ~~certain death~~ a functional absence"
     st.markdown(f"{title}", unsafe_allow_html=True)
     # start chat
@@ -50,7 +50,3 @@ def save_screen():
                         st.markdown("Try our simple " + aihandler.links[st.session_state.id][0] + " testing tool [here](https://doleofdoves.streamlit.app/#"+aihandler.links[st.session_state.id][1]+")")
             st.session_state.messages.append({"role": "assistant", "content": response})
             print(st.session_state.messages)
-
-
-
-            
