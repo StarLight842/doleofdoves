@@ -3,12 +3,13 @@ import streamlit as st
 # SPEAKER
 #
 #
+"""
 import sounddevice as sd
 import numpy as np
 
 
 def play_tone(frequency=1000, duration=3, samplerate=44100, device=None):
-    """Play a tone through the specified audio output device."""
+    \"\"\"Play a tone through the specified audio output device.\"\"\"
     t = np.linspace(0, duration, int(samplerate * duration), endpoint=False)
     signal = 0.5 * np.sin(2 * np.pi * frequency * t)
     if device is not None:
@@ -42,3 +43,4 @@ def speaker_tool():
             st.success(f"Great, change the speaker on Adobe Connect to {selected_device_name}! ")
         else:
             st.write("Try another speaker.")
+"""
