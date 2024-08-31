@@ -15,6 +15,6 @@ def prep_screen():
     st.markdown("## Test your camera")
     st.text(st.markdown("stuff \n\n"*10))
     st.markdown("## Test your speakers")
-    st.text(st.markdown("stuff \n\n"*10))
+    tools.speaker_tool()
     st.markdown("## Test your internet")
     st.text(st.markdown("stuff \n\n"*10))
