@@ -70,4 +70,5 @@ def camera_tool():
 # INTERNET
 #
 def bandwidth_tool():
-    st.write("internet "*100)
+    st.write("Below is an external [site](https://www.fast.com) that automatically will measure your bandwidth upon launching this webpage. Click the refresh icon as needed to determine your internet speed; make sure that space them apart so that traffic will not be throttled, and the other devices on your network are using traffic approximately like they would during class time. We recommend speeds of at least 30-50 mbps or higher for OHS classes in Adobe Connect.")
+    st.components.v1.iframe("https://fast.com", height=500)

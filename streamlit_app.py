@@ -8,16 +8,10 @@ st.session_state.messages = [{
 st.session_state.solved = False 
 pages = {
     "Dole of Doves": [
-        st.Page(prep.prep_screen, title="Prepare for a meeting"),
         st.Page(save.save_screen, title="SAVE ME I'M DYING"),
+        st.Page(prep.prep_screen, title="Prepare for a meeting"),
     ]
 }
 st.caption("TEAM DOLE OF DOVES: LABOR DAY HACKATHON SUBMISSION")
 pg = st.navigation(pages)
 pg.run()
-
-
-# BUG LIST
-# Overwriting chat history
-# (nice to have) Auto tech support form
-# Internet/speaker tools

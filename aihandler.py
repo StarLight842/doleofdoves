@@ -31,15 +31,15 @@ If you can’t see anyone, make sure your display is set to the one you’re cur
 Download the desktop version of AC [here](https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html)
 """,
 "CAM": """
-**If no one can see you, it’s a ‘them’ problem.**
-All jokes aside though, it appears that your camera isn’t functioning. Make sure you have selected the right camera and try a few different ones in our camera testing tool.
+**Just confirming: have you been using any invisibility spells recently?**
+If you're not Harry Potter, it appears that your camera isn’t functioning. Make sure you have selected the right camera and try a few different ones in our camera testing tool.
 """,
 "SND": """
 **Contact a hearing specialist.**
 If you can’t hear anything, the most likely problem is that your speaker is muted. (Trust us, this is the case 90% of the time.) Otherwise, make sure you have selected the right speaker and try a few different ones in our speaker testing tool.
 """,
 "INT": """
-**Try Ferizon Internet. Use [this affiliate link](https://www.ferizon.com) to get 10% off.**
+**Maybe try wider bands?**
 It appears your bandwidth is not up to par. (You can confirm this by checking our internet testing tool; we recommand 30-50 mbps or higher). The fastest hack to save on bandwidth is to select the three dots on your camera pod in AC then click “Pause incoming video.” This will freeze the video of all other participants (including your instructor), and should greatly reduce your network usage.
  For the long term, talk to your parents or guardians about a faster wifi plan or using wired internet (Ethernet); if those options aren’t possible, try switching to the desktop version of Adobe Connect, which is less network-demanding. 
 """,
