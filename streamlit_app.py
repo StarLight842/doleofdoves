@@ -8,7 +8,7 @@ st.session_state.messages = [{
 st.session_state.solved = False 
 pages = {
     "Dole of Doves": [
-        st.Page(save.save_screen, title="SAVE ME I'M DYING"),
+        st.Page(save.save_screen, title="SAVE ME"),
         st.Page(prep.prep_screen, title="Prepare for a meeting"),
     ]
 }

@@ -22,7 +22,7 @@ system_instruction="You are a helpful tech support agent for Adobe Connect users
 dialogs = {
 "MIC": """
 **If a ~~tree falls~~ you talk and no one hears it, did it really happen?**
-It looks like there’s an issue with your microphone. If no one can hear you, make sure you have selected the right microphone and try a few different ones in our microphone testing tool.
+It looks like there’s an issue with your microphone. If no one can hear you, make sure you have selected the right microphone and try a few different ones in our microphone testing tool. Once you've found the correct input device, navigate to the dropdown menu beneath the microphone icon in Adobe Connect and choose that device.
 """,
 "DISPL": """
 **Hmmmm. Try glasses?**
@@ -32,7 +32,7 @@ Download the desktop version of AC [here](https://helpx.adobe.com/adobe-connect/
 """,
 "CAM": """
 **Just confirming: have you been using any invisibility spells recently?**
-If you're not Harry Potter, it appears that your camera isn’t functioning. Make sure you have selected the right camera and try a few different ones in our camera testing tool.
+If you're not Harry Potter, it appears that your camera isn’t functioning. Make sure you have selected the right camera and try a few different ones in our camera testing tool. Once you've found the correct input device, navigate to the dropdown menu beneath the camera icon in Adobe Connect and choose that device.
 """,
 "SND": """
 **Contact a hearing specialist.**
@@ -80,7 +80,7 @@ class Conversation:
         dialog = "✅ Problem solved by DoveAI"
         dialog += "\n\n" + dialogs[self.solved_id]
         if self.solved_id not in ["DISPL", "ELSE"]:
-            dialog += "\n\n Try our simple " + links[self.solved_id][0] + " testing tool [here](https://doleofdoves.streamlit.app/#"+links[self.solved_id][1]+")"
+            dialog += "\n\n Try our simple " + links[self.solved_id][0] + " testing tool [here](https://doleofdoves.streamlit.app/prep_screen#"+links[self.solved_id][1]+")"
         if self.solved_id not in ["ELSE"]:
             dialog += "\n\n Still having issues? Fill out an [OHS tech support form](https://ohs.stanford.edu/techsupport) to get help from the professionals"
         return dialog

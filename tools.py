@@ -23,7 +23,7 @@ def speaker_tool():
 # MICROPHONE
 #
 def mic_tool():
-    st.write("Click 'Start' to show a bar with the current volume level of your incoming mic (e.g. it should increase if you do something loud for a few seconds e.g. scream). It will be a little janky due to software limitations. If the volume isn't updating or is different than what you expect, try the 'Select device' menu and go through the options available.")
+    st.write("Click 'Start' to show a bar with the current volume level of your incoming mic (e.g. it should increase if you do something loud for a few seconds e.g. scream). Due to permissions issues, it might take 5-10 seconds to load, so please be patient. It will be a little jumpy due to software limitations. If the volume isn't updating or is different than what you expect, try the 'Select device' menu and go through the options available. Once you've found the correct input device, navigate to the dropdown menu beneath the microphone icon in Adobe Connect and choose that device.")
 
     webrtc_ctx = webrtc_streamer(
         key="speech-to-text",
@@ -40,24 +40,20 @@ def mic_tool():
 
     status_indicator.write("Loading...")
 
-    while 1==1:
+    while True:
         if webrtc_ctx.audio_receiver:
             try:
                 audio_frames = webrtc_ctx.audio_receiver.get_frames(timeout=1)
-                volumes = []
-                for f in audio_frames:
-                    volumes.append(np.average(f.to_ndarray()))
                 with status_indicator:
-                    volume = int(np.average(volumes))
+                    volume = int(np.average(audio_frames[-1].to_ndarray()))
                     st.slider("Volume input level", min_value=-50, max_value=200, value=volume)
             except:
-                pass
-        time.sleep(0.05)
+                time.sleep(0.05)
 #
 # CAMERA
 #
 def camera_tool():
-    st.write("Click 'Start' to see a streamed output from your default camera. If the output isn't showing or is lower quality than you expect, try the 'Select device' menu (which also shows a preview of camera output) and go through the options available.")
+    st.write("Click 'Start' to see a streamed output from your default camera. If the output isn't showing or is lower quality than you expect, try the 'Select device' menu (which also shows a preview of camera output) and go through the options available. Once you've found the correct input device, navigate to the dropdown menu beneath the camera icon in Adobe Connect and choose that device.")
     webrtc_ctx = webrtc_streamer(
         key="object-detection",
         mode=WebRtcMode.SENDRECV,
