@@ -12,6 +12,7 @@ pages = {
         st.Page(prep.prep_screen, title="Prepare for a meeting"),
     ]
 }
+st.image("resources/logo.png", width=450)
 st.caption("TEAM DOLE OF DOVES: LABOR DAY HACKATHON SUBMISSION")
 pg = st.navigation(pages)
 pg.run()
