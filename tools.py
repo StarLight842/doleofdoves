@@ -1,17 +1,27 @@
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, AudioProcessorBase, WebRtcMode
+from streamlit_webrtc import webrtc_streamer, AudioProcessorBase, WebRtcMode, WebRtcStreamerContext
 import time
+from aiortc.contrib.media import MediaPlayer
 import numpy as np
 #
 # SPEAKER
 #
 def speaker_tool():
-    st.write("speaker "*100)
+    st.write("Click 'Start' to play a test sound. If you can't hear anything, then try changing your speaker in your computer settings. Here are instructions to do so for: [MacOS](https://support.apple.com/en-qa/guide/mac-help/mchlp2256), [Windows](https://www.dell.com/support/kbdoc/en-us/000189443/how-to-select-different-audio-output-devices-in-windows-10), and [ChromeOS](https://support.google.com/chromebook/answer/10045949?hl=en).")
+    webrtc_streamer(
+        key="streaming",
+        mode=WebRtcMode.RECVONLY,
+        rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
+        media_stream_constraints={
+            "video": False,
+            "audio": True,
+        },
+        player_factory=lambda: MediaPlayer("rick.mp3"),
+    )
 
 #
 # MICROPHONE
 #
-import streamlit as st
 def mic_tool():
     st.write("Click 'Start' to show a bar with the current volume level of your incoming mic (e.g. it should increase if you do something loud for a few seconds e.g. scream). It will be a little janky due to software limitations. If the volume isn't updating or is different than what you expect, try the 'Select device' menu and go through the options available.")
 

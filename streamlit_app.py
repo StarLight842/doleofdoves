@@ -15,3 +15,9 @@ pages = {
 st.caption("TEAM DOLE OF DOVES: LABOR DAY HACKATHON SUBMISSION")
 pg = st.navigation(pages)
 pg.run()
+
+
+# BUG LIST
+# Overwriting chat history
+# (nice to have) Auto tech support form
+# Internet/speaker tools
